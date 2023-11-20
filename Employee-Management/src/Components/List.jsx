@@ -7,11 +7,6 @@ function List({ employees, handleEdit, handleDelete, searchTerm }) {
     minimumFractionDigits: null,
   });
 
-  // Filter employees based on the search term
-  const filteredEmployees = employees.filter((employee) =>
-    employee.Name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div className="contain-table">
       <table className="striped-table">
@@ -29,8 +24,8 @@ function List({ employees, handleEdit, handleDelete, searchTerm }) {
           </tr>
         </thead>
         <tbody>
-          {filteredEmployees.length > 0 ? (
-            filteredEmployees.map((employee, i) => (
+          {employees.length > 0 ? (
+            employees.map((employee, i) => (
               <tr key={employee.id}>
                 <td className="text-center">{i + 1}</td>
                 <td className="text-center">{employee.Name}</td>

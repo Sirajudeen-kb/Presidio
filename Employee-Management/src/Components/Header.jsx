@@ -36,9 +36,10 @@ function Header({ setIsAdd, handleSearch, handleFilter }) {
             onChange={handleFilterChange}
           >
             <option value='all'>All Departments</option>
-            <option value='hr'>HR</option>
-            <option value='it'>IT</option>
-            {/* Add more department options as needed */}
+            <option value='human resources'>Human Resources</option>
+            <option value='development'>Development</option>
+            <option value='marketing'>Marketing</option>
+            <option value='finance'>Finance</option>
           </select>
         </div>
         <button onClick={() => setIsAdd(true)} className='round-button'>
